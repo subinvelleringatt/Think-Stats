@@ -112,7 +112,7 @@ class Respondents(Table):
         self.Recode()
 
     def GetFilename(self):
-        return '2002FemResp.dat.gz'
+        return 'C:\\Users\\sinsbv\\Documents\\GitHub\\Think-Stats\\data\\2002FemResp.dat.gz'
 
     def GetFields(self):
         """Returns a tuple specifying the fields to extract.
@@ -136,7 +136,7 @@ class Pregnancies(Table):
         self.Recode()
 
     def GetFilename(self):
-        return '2002FemPreg.dat.gz'
+        return 'C:\\Users\\sinsbv\\Documents\\GitHub\\Think-Stats\\data\\2002FemPreg.dat.gz'
 
     def GetFields(self):
         """Gets information about the fields to extract from the survey data.
@@ -187,11 +187,12 @@ class Pregnancies(Table):
 def main(name, data_dir='.'):
     resp = Respondents()
     resp.ReadRecords(data_dir)
-    print 'Number of respondents', len(resp.records)
+    print ('Number of respondents', len(resp.records))
+    
 
     preg = Pregnancies()
     preg.ReadRecords(data_dir)
-    print 'Number of pregnancies', len(preg.records)
+    print ('Number of pregnancies', len(preg.records))
 
     
 if __name__ == '__main__':
