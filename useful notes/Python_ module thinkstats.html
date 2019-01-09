@@ -1,0 +1,138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module thinkstats</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>thinkstats</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/downey/thinkstats/trunk/workspace.thinkstats/ThinkStats/thinkstats.py">/home/downey/thinkstats/trunk/workspace.thinkstats/ThinkStats/thinkstats.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;file&nbsp;contains&nbsp;code&nbsp;for&nbsp;use&nbsp;with&nbsp;"Think&nbsp;Stats",<br>
+by&nbsp;Allen&nbsp;B.&nbsp;Downey,&nbsp;available&nbsp;from&nbsp;greenteapress.com<br>
+&nbsp;<br>
+Copyright&nbsp;2010&nbsp;Allen&nbsp;B.&nbsp;Downey<br>
+License:&nbsp;GNU&nbsp;GPLv3&nbsp;<a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a></tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bisect.html">bisect</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="thinkstats.html#Interpolator">Interpolator</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Interpolator">class <strong>Interpolator</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Represents&nbsp;a&nbsp;mapping&nbsp;between&nbsp;sorted&nbsp;sequences;&nbsp;performs&nbsp;linear&nbsp;interp.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;xs:&nbsp;sorted&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ys:&nbsp;sorted&nbsp;list<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Interpolator-Lookup"><strong>Lookup</strong></a>(self, x)</dt><dd><tt>Looks&nbsp;up&nbsp;x&nbsp;and&nbsp;returns&nbsp;the&nbsp;corresponding&nbsp;value&nbsp;of&nbsp;y.</tt></dd></dl>
+
+<dl><dt><a name="Interpolator-Reverse"><strong>Reverse</strong></a>(self, y)</dt><dd><tt>Looks&nbsp;up&nbsp;y&nbsp;and&nbsp;returns&nbsp;the&nbsp;corresponding&nbsp;value&nbsp;of&nbsp;x.</tt></dd></dl>
+
+<dl><dt><a name="Interpolator-__init__"><strong>__init__</strong></a>(self, xs, ys)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Binom"><strong>Binom</strong></a>(n, k, d<font color="#909090">={}</font>)</dt><dd><tt>Compute&nbsp;the&nbsp;binomial&nbsp;coefficient&nbsp;"n&nbsp;choose&nbsp;k".<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;n:&nbsp;number&nbsp;of&nbsp;trials<br>
+&nbsp;&nbsp;k:&nbsp;number&nbsp;of&nbsp;successes<br>
+&nbsp;&nbsp;d:&nbsp;map&nbsp;from&nbsp;(n,k)&nbsp;tuples&nbsp;to&nbsp;cached&nbsp;results<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;int</tt></dd></dl>
+ <dl><dt><a name="-Jitter"><strong>Jitter</strong></a>(values, jitter<font color="#909090">=0.5</font>)</dt><dd><tt>Jitters&nbsp;the&nbsp;values&nbsp;by&nbsp;adding&nbsp;a&nbsp;uniform&nbsp;variate&nbsp;in&nbsp;(-jitter,&nbsp;jitter).</tt></dd></dl>
+ <dl><dt><a name="-Mean"><strong>Mean</strong></a>(t)</dt><dd><tt>Computes&nbsp;the&nbsp;mean&nbsp;of&nbsp;a&nbsp;sequence&nbsp;of&nbsp;numbers.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;t:&nbsp;sequence&nbsp;of&nbsp;numbers<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float</tt></dd></dl>
+ <dl><dt><a name="-MeanVar"><strong>MeanVar</strong></a>(t)</dt><dd><tt>Computes&nbsp;the&nbsp;mean&nbsp;and&nbsp;variance&nbsp;of&nbsp;a&nbsp;sequence&nbsp;of&nbsp;numbers.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;t:&nbsp;sequence&nbsp;of&nbsp;numbers<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple&nbsp;of&nbsp;two&nbsp;floats</tt></dd></dl>
+ <dl><dt><a name="-Trim"><strong>Trim</strong></a>(t, p<font color="#909090">=0.01</font>)</dt><dd><tt>Trims&nbsp;the&nbsp;largest&nbsp;and&nbsp;smallest&nbsp;elements&nbsp;of&nbsp;t.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;t:&nbsp;sequence&nbsp;of&nbsp;numbers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p:&nbsp;fraction&nbsp;of&nbsp;values&nbsp;to&nbsp;trim&nbsp;off&nbsp;each&nbsp;end<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sequence&nbsp;of&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-TrimmedMean"><strong>TrimmedMean</strong></a>(t, p<font color="#909090">=0.01</font>)</dt><dd><tt>Computes&nbsp;the&nbsp;trimmed&nbsp;mean&nbsp;of&nbsp;a&nbsp;sequence&nbsp;of&nbsp;numbers.<br>
+&nbsp;<br>
+Side&nbsp;effect:&nbsp;sorts&nbsp;the&nbsp;list.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;t:&nbsp;sequence&nbsp;of&nbsp;numbers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p:&nbsp;fraction&nbsp;of&nbsp;values&nbsp;to&nbsp;trim&nbsp;off&nbsp;each&nbsp;end<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float</tt></dd></dl>
+ <dl><dt><a name="-TrimmedMeanVar"><strong>TrimmedMeanVar</strong></a>(t, p<font color="#909090">=0.01</font>)</dt><dd><tt>Computes&nbsp;the&nbsp;trimmed&nbsp;mean&nbsp;and&nbsp;variance&nbsp;of&nbsp;a&nbsp;sequence&nbsp;of&nbsp;numbers.<br>
+&nbsp;<br>
+Side&nbsp;effect:&nbsp;sorts&nbsp;the&nbsp;list.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;t:&nbsp;sequence&nbsp;of&nbsp;numbers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p:&nbsp;fraction&nbsp;of&nbsp;values&nbsp;to&nbsp;trim&nbsp;off&nbsp;each&nbsp;end<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float</tt></dd></dl>
+ <dl><dt><a name="-Var"><strong>Var</strong></a>(t, mu<font color="#909090">=None</font>)</dt><dd><tt>Computes&nbsp;the&nbsp;variance&nbsp;of&nbsp;a&nbsp;sequence&nbsp;of&nbsp;numbers.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;t:&nbsp;sequence&nbsp;of&nbsp;numbers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mu:&nbsp;value&nbsp;around&nbsp;which&nbsp;to&nbsp;compute&nbsp;the&nbsp;variance;&nbsp;by&nbsp;default,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;computes&nbsp;the&nbsp;mean.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float</tt></dd></dl>
+</td></tr></table>
+</body></html>

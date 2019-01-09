@@ -96,8 +96,7 @@ def Summarize(data_dir):
     print ('Others', mu2)
     
     print ('Difference in days', (mu1 - mu2) * 7.0)
-
-
+ 
 def main(name, data_dir='.'):
     Summarize(data_dir)
     
